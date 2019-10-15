@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<string.h>
 #include<time.h>
-#include<student.h>
+#include "student.h"
 
 struct student gen_student() {
     struct student example;
@@ -13,7 +13,7 @@ struct student gen_student() {
 }
 
 int print_student(struct student subject) {
-    printf("OSIS: %d; Name: %s", subject.osis, subject.name);
+    printf("OSIS: %d; Name: %s\n", subject.osis, subject.name);
     return 0;
 }
 

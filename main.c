@@ -1,15 +1,18 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<student.h>
+#include "student.h"
 
 int main() {
-    struct student arr_stu[4];
-    struct student* arr_pstu[4]; 
     for (int i = 0; i < 4; i++) {
-        arr_stu[i] = gen_student();
-        arr_pstu[i] = &arr_stu[i];
-        printf("Values for student %d:\n", i);
-        print_student(arr_stu[i]);
+        struct student stu = gen_student();
+        printf("Randomly generated student info:\n\t");
+        print_student(stu);
+        int default_osis = 999999999;
+        char* default_name = "defaultname";
+        mod_student(&stu, default_osis, default_name);
+        printf("Manually changed student info expected to be:\n\tOSIS: %d; Name: %s\n", default_osis, default_name);
+        printf("Manually changed student info is returned as:\n\t");
+        print_student(stu);
     }
     
 }
