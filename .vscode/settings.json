@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "quark.h": "c",
+        "stdlib.h": "c"
+    }
+}
