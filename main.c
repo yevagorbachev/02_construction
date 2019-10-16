@@ -11,11 +11,11 @@ int main() {
         printf("Randomly generated student info:\n\t");
         print_student(stu);
 
-        int default_osis = rand_range(200000000, 230000000);
+        int rand_osis = rand_range(200000000, 230000000);
         char* default_name = "manualname";
-        mod_student(&stu, default_osis, default_name);
+        mod_student(&stu, rand_osis, default_name);
 
-        printf("Manually changed student info expected to be:\n\tOSIS: %d; Name: %s\n", default_osis, default_name);
+        printf("Manually changed student info expected to be:\n\tOSIS: %d; Name: %s\n", rand_osis, default_name);
         printf("Manually changed student info is returned as:\n\t");
         print_student(stu);
     }
