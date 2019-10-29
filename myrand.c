@@ -1,6 +1,7 @@
 #include<stdlib.h>
 #include<time.h>
 #include "myrand.h"
+
 int usrand() { // seeds rand with nanosecond time
     struct timespec ts;
     timespec_get(&ts, TIME_UTC);
